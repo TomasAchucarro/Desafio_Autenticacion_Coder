@@ -1,0 +1,58 @@
+<nav>
+  <div>
+    <a href="/products/carts/64c0894b2757073ec064cb39">Cart</a>
+  </div>
+</nav>
+
+<div>
+  <div>
+    <div>
+      <div style="border-radius: 15px;">
+        <div data-mdb-ripple-color="light">
+          <img
+            src="/img/{{product.thumbnails}}"
+            style="border-top-left-radius: 15px;
+              border-top-right-radius: 15px;"
+            alt={{product.title}}
+          />
+          <a href="#!">
+            <div></div>
+          </a>
+        </div>
+        <div>
+          <div>
+            <div>
+              <p>{{product.title}}</p>
+              <p>{{product.description}}</p>
+            </div>
+            <div>
+              <div>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div>
+          <div>
+            <p>${{product.price}}</p>
+            <p>{{product.code}}</p>
+          </div>
+        </div>
+        <hr />
+        <div>
+          <div>
+            <a href="#!">Cancel</a>
+            <button type="button">Buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>

@@ -1,0 +1,60 @@
+{{#if emptyCart}}
+  <div>
+    <h2>{{emptyCart}}</h2>
+  </div>
+{{else}}
+  <div id="cartBody">
+    <div>
+      <div>
+
+        <div>
+          <h3>Shopping Cart</h3>
+          <div>
+            <p><span>Sort by:</span>
+              <a href="#!">price
+                <i></i></a></p>
+          </div>
+        </div>
+        {{#each carts}}
+          <div>
+            <div>
+              <div>
+                <div>
+                  <img
+                    src="/img/{{this.product.thumbnails}}"
+                    alt="{{this.product.title}}"
+                  />
+                </div>
+                <div>
+                  <p>{{this.product.title}}</p>
+                  <p><span>Category:
+                    </span>{{this.product.category}}</p>
+                </div>
+                <div>
+
+                  <label>Quantity</label>
+                  <input type="number" value="{{this.quantity}}" readonly />
+                </div>
+                <div>
+                  <h5 class="mb-0">${{this.product.price}}</h5>
+                </div>
+                <div>
+                  <a href="#!"><i></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+        <div>
+          <div>
+            <button type="button" onclick="emptyCart()">Buy Now</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>
